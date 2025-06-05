@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffd1dc; /* rosa pastel */
+  overflow: hidden;
+}
+
+.seccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+#titulo {
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+}
+
+#gif {
+  max-width: 300px;
+  z-index: 0;
+}
+
+.botones {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 1;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: white;
+  border: 2px solid red;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+#confirmarSi {
+  background-color: #ffb6c1;
+  border: 2px solid white;
+  color: black;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.oculto {
+  display: none !important;
+}
+
+#hackeo {
+  background-color: black;
+  color: #00ff00;
+  font-family: monospace;
+  font-size: 0.8em;
+  padding: 2rem;
+  overflow-y: hidden;
+}
+
+#textoHackeo {
+  white-space: pre-line;
+  height: 80%;
+  overflow: hidden;
+}
+
+#barraCarga {
+  width: 80%;
+  height: 20px;
+  border: 1px solid #00ff00;
+  margin-top: 2rem;
+}
+
+#progreso {
+  height: 100%;
+  width: 0%;
+  background-color: #00ff00;
+}
+
+#tarjetaContenido {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 80%;
+  max-height: 80vh;
+  overflow-y: scroll;
+  animation: flotar 3s infinite alternate ease-in-out;
+}
+
+#tarjetaContenido h2 {
+  color: #800080;
+}
+
+#razones {
+  color: #800080;
+  font-size: 0.9em;
+}
+
+#volver {
+  background-color: pink;
+  color: green;
+  margin-top: 1rem;
+}
+
+@keyframes flotar {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+/* Arcoiris para el título */
+#titulo span {
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+/* Efecto fuego rosado */
+#razones {
+  text-shadow: 0 0 5px pink, 0 0 10px pink;
+}
